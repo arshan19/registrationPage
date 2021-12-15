@@ -1,40 +1,29 @@
-// //emaxime the document object //
-// //console.dir(document);
- 
-// console.log(document.domain);
-// console.log(document.URL);
-// console.log(document.title);
-// document.title = 'DOM1';
-// console.log(document.doctype);
-// console.log(document.head);
-// console.log(document.body);
-// console.log(document.all);
-// console.log(document.all[10]);
-// document.all[10].textContent = 'ITEMS COLLECTION';
-// console.log(document.forms);
-// console.log(document.links);
-
-// console.log(document.images);
-
-//GET ELEMENT BY ID 
-//console.log(document.getElementById('header-title'));
-var headerTitle = document.getElementById('header-title');
-console.log(headerTitle);
-
-// 1.Difference between innertext and textcontent.
-console.log(headerTitle.textContent); 
-// it does not pays attention to styling atn all
-console.log(headerTitle.innerText);
-// it pays attention to styling as it doesn't show 123 which is in span
 
 
-// 2.Watch uptill 23min - Make the title have a 
-// black border as the youtuber does.
-var header = document.getElementById('main-header');
-header.style.border = 'solid 3px Black' 
+// 1. Add a new li element without the same class Name
+//And try editing it with getelementsbyclassname
+//<li>new item 5 without same class</li> using html
 
-// 3.Now make ADD ITEM bold and change the font color
-// to greeen
-var addItems = document.getElementById('main');
-addItems.style.fontWeight = 'bold';
-addItems.style.color ='green';
+//  var items = document.getElementsByClassName('list-group-item');
+//  console.log(items);
+// console.log(items[1]);
+// items[1].textContent = "hello 2";
+// items[1].style.fontWeight = "bold";
+
+// for(var i=0 ; i < items.length ;i++){
+//     items[i].style.backgroundColor = '#f4f4f4';
+// }
+//  items[4].style.backgroundColor='pink';// no changes as class name is not same
+
+
+var li = document.getElementsByTagName('li');
+console.log(li);
+console.log(li[1]);
+li[1].textContent = "hello 2";
+li[1].style.fontWeight = "bold";
+
+for(var i=0 ; i < li.length ;i++){
+    li[i].style.backgroundColor = '#f4f4f4';
+}
+
+li[4].style.backgroundColor = 'Pink';
